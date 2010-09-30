@@ -25,7 +25,7 @@ O O O O O O
 O O O O O O
 EOS
 
-IMAGE_WITH_H_3_3_5_C = <<EOS.chomp
+IMAGE_WITH_H_3_5_3_C = <<EOS.chomp
 O O O O O O
 O O O O O O
 O O C C C O

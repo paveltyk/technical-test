@@ -33,12 +33,12 @@ describe Image do
 
   describe "#draw_horizontal_segment" do
     it "should draw horizontal line with 'C' color" do
-      image.draw_horizontal_segment(3, 3, 5, 'C')
-      image.to_s.should eql IMAGE_WITH_H_3_3_5_C
+      image.draw_horizontal_segment(3, 5, 3, 'C')
+      image.to_s.should eql IMAGE_WITH_H_3_5_3_C
     end
     it "should draw horizontal line with 'C' color even if X coordinates are in reverse order" do
-      image.draw_horizontal_segment(3, 5, 3, 'C')
-      image.to_s.should eql IMAGE_WITH_H_3_3_5_C
+      image.draw_horizontal_segment(5, 3, 3, 'C')
+      image.to_s.should eql IMAGE_WITH_H_3_5_3_C
     end
   end
 

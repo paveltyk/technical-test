@@ -21,7 +21,7 @@ class Image
     @image_arr[y1..y2].each { |row| row[x] = color }
   end
 
-  def draw_horizontal_segment(y, x1, x2, color)
+  def draw_horizontal_segment(x1, x2, y, color)
     y, x1, x2 = normalize_coords(y, x1, x2)
     x1, x2 = x2, x1 if x1 > x2
     @image_arr[y].fill(color, x1..x2)
