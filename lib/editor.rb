@@ -1,6 +1,10 @@
 require 'image'
 require 'readline'
 
+# trap SIGINT and restore the state of the terminal
+stty_save = `stty -g`.chomp
+trap('INT') { system('stty', stty_save); exit }
+
 class Editor
   def initialize(output)
     @output = output
@@ -13,6 +17,8 @@ class Editor
   def listen
     loop do
       cmd = Readline::readline '> ', true
+      # exit if user press CTRL-D
+      exit if cmd.nil?
       execute(cmd)
     end
   end
